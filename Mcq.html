@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MCQ</title>
+</head>
+<body>
+   <form>
+      <h1>C++ Online Test</h1> 
+      <label><strong>Enter your name:</strong></label><br><br>
+      <input type="text" id="fname" name="fname">&emsp;
+      <input type="text" id="lname" name="lname"><br>
+      <label class="info" style="padding-right: 130px;" for="fname">First Name:</label>
+      <label class="info" for="lname">Last Name:</label><br><br>
+
+      <label><strong>Enter your Roll No:</strong></label><br><br>
+      <input type="text" id="email"name="email"><br><br>
+
+      <label><strong>Enter your Email:</strong></label><br><br>
+      <input type="Email" id="email"name="email" placeholder="ex: myname@example.com"><br><br>
+
+      <h3>Compiler generates ___ file</h3>
+
+      <div id="quest1" >    
+         <input type="radio" id="Fastlearning" name="question1">
+            <label for="Fastlearning">Executable code</label><br/>
+         <input type="radio"  name="question1">
+            <label>Object code</label><br/>
+         <input type="radio" name="question1">
+            <label>Assembly code</label> <br/>
+         <input type="radio" name="question1">
+         <label>None of the above</label> 
+      </div>
+
+      <h3>What will be the output of the following program?</h3>
+      <div class="first" >
+      <pre>
+      #include &lt;iostream&gt;
+      using namespace std;    
+      int main () {
+         // local variable declaration:
+         int x = 1;
+         switch(x) {
+         case 1 :
+            cout << "Hi!" << endl; 
+            break;
+         default :
+            cout << "Hello!" << endl;
+         }
+      }  
+      </pre>
+      </div>
+      <div id="quest2">    
+         <input class="first" type="radio" id="Fastlearning" name="question2">
+            <label for="Fastlearning">Hello</label><br/>
+         <input type="radio"  name="question1">
+            <label>Hi</label><br/>
+         <input type="radio" name="question1">
+            <label>HelloHi</label> <br/>
+         <input type="radio" name="question1">
+         <label>Compiler error
+      </label> 
+      </div>
+
+      <h3>Which operator is used to resolve the scope of the global variable?</h3>
+
+
+      <div id="id=quest3">    
+         <input class="first" type="radio" id="Fastlearning" name="question3">
+            <label for="Fastlearning">--></label><br/>
+         <input type="radio"  name="question1">
+            <label>.</label><br/>
+         <input type="radio" name="question1">
+            <label>*</label> <br/>
+         <input type="radio" name="question1">
+         <label>::</label> 
+      </div>
+
+      <h3>Does both the loops in the following programs prints the correct string length?</h3>
+      <div class="first">
+      <pre>
+         #include&lt;iostream&gt;
+         using namespace std;
+         main() {
+            int i;
+            
+            char s[] = "hello";
+         
+            for(i=0; s[i]; ++i);
+               cout&lt;&lt;i&lt;&lt;endl;
+         
+            i=0; 
+            
+            while(s[i++]);
+               cout&lt;&lt;i;
+         }
+      </pre>
+      </div>
+
+      <div id="id=quest4">    
+         <input class="first" type="radio" id="Fastlearning" name="question4">
+            <label for="Fastlearning">Yes, both the loops prints the correct length</label><br/>
+         <input type="radio"  name="question1">
+            <label>Only for loop prints the correct length</label><br/>
+         <input type="radio" name="question1">
+            <label>Only while loop prints the correct length</label> <br/>
+         <input type="radio" name="question1">
+         <label>Compile error in the program.</label> 
+      </div>
+
+      <h3>A C++ code line ends with ___</h3>
+
+      <div id="quest5">    
+         <input class="first" type="radio" id="Fastlearning" name="question5">
+            <label for="Fastlearning">A Semicolon (;)</label><br/>
+         <input type="radio"  name="question1">
+            <label>A Fullstop(.)</label><br/>
+         <input type="radio" name="question1">
+            <label>A Comma (,)</label> <br/>
+         <input type="radio" name="question1">
+         <label>A Slash (/)</label> 
+      </div>
+      <br/>
+      <input type="submit" id="bdecor" value="Submit Test">
+   </form>
+</body>
+</html>

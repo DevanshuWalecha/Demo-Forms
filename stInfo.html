@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodycolor">
+    <div class="login">
+        <form method="post">
+        <h1>Fill out the following details : </h1>
+        <label for="stName">Full Name : </label>
+        <input type="text" class="stinput" name="stName" placeholder="Name" required="required" /><br>
+        <label for="dob">Date of Birth : </label>
+        <input type="date" class="stinput" name="dob" required="required" /><br>
+        <label for="mob">Mobile / Telephone number : </label>
+        <input type="tel" class="stinput" name="mob" value="+91-" required="required" maxlength="14"/><br>
+        <label for="branch">Branch : </label>
+        <label><input type="radio" class="stinput" name="branch" value="CSE">CSE</label>
+        <label><input type="radio" class="stinput" name="branch" value="ECE">ECE</label>
+        <label><input type="radio" class="stinput" name="branch" value="MAE">MAE</label><br>
+        <div class="adrs">
+            <label for="add">Address : </label>
+            <textarea name="add" cols="30" rows="5"></textarea><br>
+        </div>
+        <button type="submit" id="bdecor">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
