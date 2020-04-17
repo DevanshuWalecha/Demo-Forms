@@ -8,12 +8,13 @@
 </head>
 <body id="bodycolor">
     <div class="login">
-        <form method="post">
+        <form method="post" name="logform">
         <h1>Login</h1>
-        <input type="text" class="logininput" name="u" placeholder="Username" required="required" />
-        <input type="password" class="logininput" name="p" placeholder="Password" required="required" />
-        <button type="submit" class="btn-login">Login</button>
+        <input type="text" class="logininput" name="u" placeholder="Username" />
+        <input type="password" class="logininput" name="p" placeholder="Password"/>
+        <button type="submit" onclick="validatelogform();" class="btn-login">Login</button>
         </form>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

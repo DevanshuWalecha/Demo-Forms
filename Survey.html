@@ -7,7 +7,7 @@
   <title>Survey Form</title>
 </head>
 <body>
-<form>
+<form name="Surform">
   <h1>Customer Satisfaction Survey Form</h1>
   <h2>Customer Information:</h2>
   <label><strong>Customer Name:</strong><span class="form-required">  *</span></label><br><br>
@@ -43,7 +43,7 @@
   <label class="info" for="country">Country</label><br><br><br>
 
   <label><strong>Contact No:</strong><span class="form-required">  *</span></label><br><br>
-  <input type="tel" id="number"name="number"><br><br><br> 
+  <input type="number" id="number"name="number"><br><br><br> 
 
   <hr>
   <p><strong>How long have you been using this product and why ?</strong></p>
@@ -61,8 +61,8 @@
      <p><strong>What kind of changes would you like to see in our products so as to enhance your satisfaction level?</strong></p>
   <textarea rows="5" cols="50" name="comment"></textarea><br><br>
 
-  <input type="submit" id="bdecor" value="Submit">
+  <input type="submit" onclick="validateSurform();" id="bdecor" value="Submit">
 </form>
-
+<script src="app.js"></script>
 </body>
 </html>

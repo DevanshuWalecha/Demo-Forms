@@ -7,7 +7,7 @@
   <title>MCQ</title>
 </head>
 <body>
-   <form>
+   <form name="MCQform">
       <h1>C++ Online Test</h1> 
       <label><strong>Enter your name:</strong></label><br><br>
       <input type="text" id="fname" name="fname">&emsp;
@@ -16,7 +16,7 @@
       <label class="info" for="lname">Last Name:</label><br><br>
 
       <label><strong>Enter your Roll No:</strong></label><br><br>
-      <input type="text" id="email"name="email"><br><br>
+      <input type="text" id="email"name="roll"><br><br>
 
       <label><strong>Enter your Email:</strong></label><br><br>
       <input type="Email" id="email"name="email" placeholder="ex: myname@example.com"><br><br>
@@ -123,7 +123,8 @@
          <label>A Slash (/)</label> 
       </div>
       <br/>
-      <input type="submit" id="bdecor" value="Submit Test">
+      <input type="submit" onclick="validateMCQ();" id="bdecor" value="Submit Test">
    </form>
+   <script src="app.js"></script>
 </body>
 </html>
