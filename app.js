@@ -1,3 +1,15 @@
+const MAXLENGTH = 10;
+
+function validateEMailID(emailID) {
+  var atpos = emailID.indexOf("@");
+  var dotpos = emailID.lastIndexOf(".");
+  if(atpos < 1 || ( dotpos - atpos < 2 )) {
+    alert("Please enter valid email ID");
+    return false;
+  }
+  return true;
+}
+
 function validatelogform(){  
     var uname = document.logform.u.value;  
     var password = document.logform.p.value;
@@ -17,7 +29,6 @@ function validateStForm() {
   var name = document.stform.name.value;
   var dob = document.stform.dob.value;
   var mob = document.stform.mob.value;  
-  var maxlength = 10;
   var branch = document.stform.branch.value;
   var add = document.stform.add.value;
 
@@ -29,7 +40,7 @@ function validateStForm() {
     alert("Please enter Date of Birth");
     document.stform.dob.focus();
     return false;
-  }else if(mob == null || mob == "" || mob.length!=maxlength) {
+  }else if(mob == null || mob == "" || mob.length!=MAXLENGTH) {
     alert("Please enter a valid number");
     document.stform.mob.focus();
     return false;
@@ -44,50 +55,11 @@ function validateStForm() {
   }
 }
 
-
-function validateSurform(){  
-  var fname = document.Surform.fname.value;  
-  var lname = document.Surform.lname.value;
-  var emailID = document.Surform.email.value;
-  // var atpos = emailID.indexOf("@");
-  // var dotpos = emailID.lastIndexOf(".");
-  var sad1 = document.Surform.sad1.value;
-  var sad2 = document.Surform.sad2.value;
-  var city = document.Surform.city.value;
-  var state = document.Surform.state.value;
-  var choose = document.Surform.choose.value;
-  var cNum = document.Surform.cNum.value;
-    
-  if (fname==null || fname==""){  
-    alert("Name can't be blank");
-    document.Surform.fname.focus();  
-    return false;  
-  }else if (lname==null || lname==""){  
-    alert("Please enter your last name");
-    document.Surform.lname.focus();  
-    return false;  
-  }
-  else if(emailID == null || emailID == "") {
-    alert("Please enter correct email ID")
-    document.Surform.email.focus() ;
-    return false;
-  }
-  // else if(atpos < 1 || ( dotpos - atpos < 2 )) {
-  //   alert("Please enter correct email ID")
-  //   emailID.focus() ;
-  //   return false;
-  // }
-  else if(sad1 == null || sad1 == "" || sad2 == null || sad2 == "" || city == null || city == "" || state == null || state == "" || choose == null || choose == "" || cNum == null || cNum == "") {
-    alert("Please enter complete valid address");
-    return false;
-  }
-}
-
 function validateMCQ() {
   var fname = document.MCQform.fname.value;  
   var lname = document.MCQform.lname.value;
   var roll = document.MCQform.roll.value;
-  var emailID = document.MCQform.email.value;
+  var MCQemailID = document.MCQform.MCQemail.value;
 
   if (fname==null || fname==""){  
     alert("Name can't be blank");
@@ -102,9 +74,44 @@ function validateMCQ() {
     alert("Please enter your roll no");
     document.MCQform.roll.focus();
     return false;
-  }else if(emailID == null || emailID == "") {
-    alert("Please enter correct email ID")
-    document.MCQform.email.focus() ;
+  }else if(MCQemailID == null || MCQemailID == "" || validateEMailID(MCQemailID)) {
+    alert("Please enter valid email ID");
+    document.MCQform.MCQemail.focus ;
+    return false;
+  }
+}
+
+function validateSurform(){  
+  var fname = document.Surform.fname.value;  
+  var lname = document.Surform.lname.value;
+  var suremailID = document.Surform.suremail.value;
+  var sad1 = document.Surform.sad1.value;
+  var sad2 = document.Surform.sad2.value;
+  var city = document.Surform.city.value;
+  var state = document.Surform.state.value;
+  var choose = document.Surform.choose.value;
+  var cNum = document.Surform.number.value;
+    
+  if (fname==null || fname==""){  
+    alert("Name can't be blank");
+    document.Surform.fname.focus();  
+    return false;  
+  }else if (lname==null || lname==""){  
+    alert("Please enter your last name");
+    document.Surform.lname.focus();  
+    return false;  
+  }
+  else if(suremailID == null || suremailID == "" || validateEMailID(suremailID)) {
+    alert("Please enter valid email ID");
+    document.Surform.suremail.focus() ;
+    return false;
+  }
+  else if(sad1 == null || sad1 == "" || sad2 == null || sad2 == "" || city == null || city == "" || state == null || state == "" || choose == null || choose == "") {
+    alert("Please enter complete valid address");
+    return false;
+  }else if (cNum == null || cNum == "" || cNum.length != MAXLENGTH) {
+    alert("Please enter a valid contact number");
+    document.Surform.number.focus();
     return false;
   }
 }
