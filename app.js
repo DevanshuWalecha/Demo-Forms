@@ -4,10 +4,9 @@ function validateEMailID(emailID) {
   var atpos = emailID.indexOf("@");
   var dotpos = emailID.lastIndexOf(".");
   if(atpos < 1 || ( dotpos - atpos < 2 )) {
-    alert("Please enter valid email ID");
-    return false;
+    return true;
   }
-  return true;
+  return false;
 }
 
 function validatelogform(){  
